@@ -9,3 +9,10 @@ redirect_from:
 ---
 
 Ejemplo de un manual de los productos.
+
+1213
+
+
+//```ts {monaco}
+console.log('HolaMundo')
+//```
