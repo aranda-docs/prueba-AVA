@@ -10,9 +10,18 @@ redirect_from:
 
 Ejemplo de un manual de los productos.
 
-1213
+# Hola
 
+<!-- Uso del componente: esto estará invisible hasta que presiones "siguiente" -->
+<v-click>
 
-//```ts {monaco}
-console.log('HolaMundo')
-//```
+Hola Mundo
+
+</v-click>
+
+<!-- Uso de la directiva: esto estará invisible hasta que presiones "siguiente" por segunda vez -->
+<div v-click class="text-xl p-2">
+
+¡Hey!
+
+</div>
