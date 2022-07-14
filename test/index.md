@@ -72,3 +72,13 @@ A few parts of this project are not in the public domain:
 - Normalize `[_normalize.scss]` was extrcted from [Normalize.css](https://github.com/necolas/normalize.css), copyright Nicolas Gallagher and Jonathan Neal.
 
 **Please check with the respective rights holders for license details.**
+
+| **9.3.6.15:** Se solucionan los siguientes problemas: |
+  
+  - Error Creación del caso cuando iniciaba desde el cliente.  
+  - Error al guardar servicio. "Proyecto - modelo".
+  - Error que permitía que modelos inactivos aparecieran seleccionables en la creación de la tarea.
+  - Error que muestra en la ventana de casos abiertos los casos con * así no se les hayan hecho modificaciones.
+
+
+
