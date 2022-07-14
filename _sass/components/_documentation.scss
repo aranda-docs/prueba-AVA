@@ -10,6 +10,11 @@
       cursor: pointer;
       margin-bottom: $margin_massive;
       transition: margin-bottom $base_timing $base_duration;
+      border-left: 5px solid #ff0049;
+      padding: 10px 16px;
+      background-color: #FAFAFA;
+      border-radius: 2px;
+      font-size: 17px;    
     }
     h1:after {
       content: 'arrow_back';
