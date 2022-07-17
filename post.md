@@ -1,5 +1,8 @@
 ---
-layout: default
+title: Introducción
+layout: post
+info:
+nav: false
 ---
 
 <nav id='sidebar'>
