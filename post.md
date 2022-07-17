@@ -4,10 +4,6 @@ layout: post
 info:
 ---
 
-<nav id='sidebar'>
-	{% include nav.html %}
-</nav>
-
 <section id='content'>
 {% for post in site.posts %}
   <article class='{{ post.type }}'>
