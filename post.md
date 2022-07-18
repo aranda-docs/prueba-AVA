@@ -1,8 +1,10 @@
 ---
-title: Introducción
-layout: post
-info:
+layout: default
 ---
+
+<nav id='sidebar'>
+	{% include nav.html %}
+</nav>
 
 <section id='content'>
 {% for post in site.posts %}
