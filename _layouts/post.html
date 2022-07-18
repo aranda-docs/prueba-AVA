@@ -36,14 +36,11 @@ layout: default
   </div>
 </header>
 
-<article id="documentationArea" class="sg_doc">
-  <section id='article'>
-   {% for post in site.posts %}
-  <article class='{{ post.type }}'>
-    <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.url_path }}</code> {% endif %}{{ post.title }}</h2></a>
-    <section class='body'>
-      {{ post.content }}
-    </section>
-  </article>
-  </div>
-</article>
+<body>  
+  {{ content }}
+  
+  <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+  <script src='assets.js' type='text/javascript'></script>
+  <script>require('boot');</script>
+</body>
+</html>
