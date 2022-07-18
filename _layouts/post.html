@@ -1,21 +1,49 @@
-<!DOCTYPE HTML>
-  <html id="sg" {% if site.language %} lang="{{ site.language }}"{% endif %}>
+---
+layout: default
+---
+<header id="mastheadArea" class="sg_masthead">
+  <div class="sg_contain">
+    <div class="head">
+      <!--Buscador Aranda docs-->
+      <div class="row no-gutters">
+        <div class="col">
+          <div class="form-group input-group-lg buscador-container">
+            <input typ id="formulario" class="form-control" placeholder="Busca documentos" />
+            <a class="cerrar" href="http://127.0.0.1:4000/aranda-docs-theme/"></a>
+          </div>
+        </div>
 
-  <head>
-    {% include header.html %}
-  </head>
-
-  <body id="sg">
-    <div class="sg-pusher">
-      {% include sidebar.html %}
-      <div class="content article a h2 code">
-        <h1 class="content article.GET a h2 code">API´s Documentación</h1>
+        {% if site.title contains "Release Notes" %}
+       
       </div>
+      <!-- Adding result container -->
+      <div class="row">
+        <ul id="result-box"></ul>
+      </div>
+      <!-- Adding result container -->
+
+      <!--Buscador Aranda docs-->
+      <!-- <div id="no-results">
+        <p class="item-title">No hay resultados para la busqueda </p>
+      </div> -->
+      <div class="title header typo_ostrich">{{ page.title }}</div>
+      {% if page.info %}<div class="sub_title typo_crow">{{ page.info }}</div>{% endif %}
     </div>
-    {% include footer.html %}
-    {% include scripts.html %}
-    <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
-    <script src='assets.js' type='text/javascript'></script>
-    <script>require('boot');</script>
-     </body>
-</html>
+    {% if page.nav == true %}<aside id="nav">
+      <div class="header typo_hummingbird">Contents</div>
+      <ul></ul>
+    </aside>{% endif %}
+  </div>
+</header>
+<article id="documentationArea" class="sg_doc">
+  <section id='article'>
+{% for post in site.posts %}
+  <article class='{{ post.type }}'>
+    <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.url_path }}</code> {% endif %}{{ post.title }}</h2></a>
+    <section class='body'>
+      {{ post.content }}
+    </section>
+  </article>
+{% endfor %}
+  </div>
+</article>
